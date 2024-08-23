@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ExampleSuite">
+
+    <!-- Parallel futtatás beállítások -->
+    <parameter name="browser" value="chrome" />
+    <parameter name="url" value="https://www.example.com" />
+
+    <!-- Tesztcsomag meghatározása -->
+    <test name="ExampleTest">
+        <!-- Osztályok meghatározása -->
+        <classes>
+            <class name="org.example.KHsteps.KHV1LOGIN"/>
+        </classes>
+    </test>
+
+</suite>
