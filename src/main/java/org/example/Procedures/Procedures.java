@@ -43,25 +43,25 @@ public class Procedures {
     Thread.sleep(1000);
 
         try {
-            // Robot osztály inicializálása
+
             Robot robot = new Robot();
 
-            // Az ismétlések ideje (pl. 11 másodperc)
-            long endTime = System.currentTimeMillis() + 11000; // 11 másodperc
 
-            // Ciklus a "C" gomb ismételt megnyomására
+            long endTime = System.currentTimeMillis() + 11000;
+
+
             while (System.currentTimeMillis() < endTime) {
-                // C gomb lenyomása
+
                 robot.keyPress(KeyEvent.VK_C);
 
-                // Rövid késleltetés a lenyomva tartás szimulálásához
-                Thread.sleep(100); // 100 milliszekundum
 
-                // C gomb felengedése
+                Thread.sleep(100);
+
+
                 robot.keyRelease(KeyEvent.VK_C);
 
-                // Késleltetés a következő gombnyomás előtt
-                Thread.sleep(500); // 500 milliszekundum
+
+                Thread.sleep(500);
             }
 
             System.out.println("C gomb ismételt megnyomása befejeződött.");

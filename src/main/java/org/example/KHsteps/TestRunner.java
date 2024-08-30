@@ -10,7 +10,7 @@ public class TestRunner {
 
         Runnable testRunner = () -> {
             try {
-                // Itt meghívhatod a tesztjeidet, pl. JUnit vagy TestNG tesztek futtatása
+
                 ProcessBuilder processBuilder = new ProcessBuilder("mvn", "test");
                 processBuilder.directory(new java.io.File("C:\\Users\\Dolpheen\\IdeaProjects\\klanhaboru"));
                 processBuilder.inheritIO();
@@ -21,7 +21,7 @@ public class TestRunner {
             }
         };
 
-        // 20 percenként futtasd a tesztet
+
         executorService.scheduleAtFixedRate(testRunner, 0, 20, TimeUnit.MINUTES);
     }
 }
