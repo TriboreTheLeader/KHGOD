@@ -9,7 +9,7 @@
     <test name="ExampleTest">
         <!-- Osztályok meghatározása -->
         <classes>
-            <class name="org.example.KHsteps.KH"/>
+            <class name="org.example.KHsteps.CookieStealer"/>
         </classes>
     </test>
 

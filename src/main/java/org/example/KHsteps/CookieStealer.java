@@ -13,7 +13,7 @@ import java.util.Set;
 
 import static org.example.Xpaths.Xpaths.*;
 
-public class KH extends BaseTest {
+public class CookieStealer extends BaseTest {
 
 
 
@@ -21,27 +21,21 @@ public class KH extends BaseTest {
 
     @Test
     public void openBrowser() throws InterruptedException, IOException {
-        // Navigálás egy weboldalra
-        driver.get("https://klanhaboru.hu");
 
-        // Ellenőrizzük az oldal címét
+        driver.get("https://klanhaboru.hu");
         String pageTitle = driver.getTitle();
         System.out.println("Page title is: " + pageTitle);
-
-        // Várakozás az oldal betöltésére
         Thread.sleep(1000);
-
-        // Bejelentkezési mezők kitöltése
-        driver.findElement(USERNAME).sendKeys("");
+        driver.findElement(USERNAME).sendKeys(""); //Your UserName
         Thread.sleep(500);
-        driver.findElement(PW).sendKeys("");
+        driver.findElement(PW).sendKeys(""); //Your PW
         Thread.sleep(500);
         driver.findElement(LOGIN).click();
 
-        // Várakozás a bejelentkezés befejezésére
-        Thread.sleep(100000);  // Az időt az oldal betöltési idejéhez igazítsd
 
-        // Elmentjük a cookie-kat
+        Thread.sleep(100000);  // Csináld meg a nem vagyok robot Puzzelt manuálisan majd várj a Teszt Lefutására
+
+
         saveCookiesToFile("cookies.txt");
     }
 
