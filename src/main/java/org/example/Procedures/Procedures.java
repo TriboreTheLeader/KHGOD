@@ -38,37 +38,62 @@ public class Procedures {
 
     }
 
+
+
     public void Farm() throws IOException, InterruptedException, AWTException {
-    driver.findElement(Script).click();
-    Thread.sleep(1000);
+
+        Thread.sleep(1000);
 
         try {
 
             Robot robot = new Robot();
 
+            robot.keyPress(KeyEvent.VK_1);
+            Thread.sleep(1500);
+            robot.keyPress(KeyEvent.VK_1);
+            Thread.sleep(1500);
+            robot.keyPress(KeyEvent.VK_ENTER);
 
-            long endTime = System.currentTimeMillis() + 11000;
+            long endTime = System.currentTimeMillis() + 15000;
+
 
 
             while (System.currentTimeMillis() < endTime) {
 
-                robot.keyPress(KeyEvent.VK_C);
+
+
+                robot.keyPress(KeyEvent.VK_ENTER);
 
 
                 Thread.sleep(100);
 
 
-                robot.keyRelease(KeyEvent.VK_C);
+                robot.keyRelease(KeyEvent.VK_ENTER);
 
 
                 Thread.sleep(500);
             }
+
+
+
+
+            Thread.sleep(1500);
+            robot.keyRelease(KeyEvent.VK_2);
 
             System.out.println("C gomb ismételt megnyomása befejeződött.");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void backtovillage() throws IOException, InterruptedException, AWTException {
+
+        Thread.sleep(1000);
+        Robot robot = new Robot();
+
+        robot.keyPress(KeyEvent.VK_V);
+        Thread.sleep(10000);
     }
 
 
