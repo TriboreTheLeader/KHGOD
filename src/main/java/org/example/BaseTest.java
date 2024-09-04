@@ -16,17 +16,7 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
         // Set up WebDriver using WebDriverManager
-        WebDriverManager.chromedriver().setup();
 
-        // Create ChromeOptions instance and add arguments to disable first-run UI
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-search-engine-choice-screen");
-        options.addArguments("--disable-popup-blocking");
-
-
-
-        // Initialize WebDriver with ChromeOptions
-        driver = new ChromeDriver(options);
 
 
 
@@ -35,8 +25,6 @@ public class BaseTest {
     @AfterMethod
     public void tearDown() {
         // Close the browser
-        if (driver != null) {
-            driver.quit();
-        }
+
     }
 }

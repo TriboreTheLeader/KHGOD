@@ -24,5 +24,10 @@ public class Xpaths {
 
     public static final By Vár = By.xpath("//area[@data-title='Főhadiszállás']");
 
+    public static final By Script = By.xpath("//*[contains(text(),\"asd\")]");
+
+    public static  final By html = By.xpath("//html");
+
+
 }
 
