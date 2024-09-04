@@ -19,7 +19,9 @@ import static org.example.Xpaths.Xpaths.*;
 public class KHV1LOGIN extends BaseTest {
 
     @Test
-    public void accessSiteWithCookies() throws InterruptedException, IOException, AWTException {
+    public void
+
+    accessSiteWithCookies() throws InterruptedException, IOException, AWTException {
         int count = 1; // Számláló kezdeti értéke
 
         while (true) {
